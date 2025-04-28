@@ -1,0 +1,118 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+:disabled {
+    cursor: not-allowed;
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+figcaption,
+input[type="search"],
+input[type="text"],
+li,
+p,
+textarea {
+    max-width: 65ch;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+img {
+    display: block;
+}
+
+input,
+textarea {
+    letter-spacing: inherit;
+    word-spacing: inherit;
+}
+
+label {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: start;
+}
+
+/* Tablet */
+@media (min-width: 480px) {
+
+}
+
+/* Laptop */
+@media (min-width: 768px) {
+
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+
+}

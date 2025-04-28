@@ -1,0 +1,43 @@
+@import url(base.css);
+
+:root {
+    --spacing: 0.5rem;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+button {
+    padding: var(--spacing);
+}
+
+h1,
+h2 {
+    margin: 0;
+    padding: var(--spacing);
+}
+
+input {
+    padding: var(--spacing);
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    padding: var(--spacing);
+}
+
+#controls {
+    display: flex;
+    gap: var(--spacing);
+}
+
+.control {
+    display: grid;
+    gap: var(--spacing);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Boilerplate</title>
+        <link href="css/index.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Omen</h1>
+            </header>
+            <section id="controls">
+                <div class="control">
+                    <label for="champion">Champion</label>
+                    <input id="champion" type="text" placeholder="Champion name">
+                </div>
+                <div class="control">
+                    <label for="versions">Recent Patches</label>
+                    <input id="versions" type="number" max="5" min="0" placeholder="0">
+                </div>
+                <button id="update">Update</button>
+            </section>
+            <section id="champion">
+                <header>
+                    <h2>Champion</h2>
+                </header>
+                <table>
+                    <caption>Champion's Spell Cooldowns</caption>
+                    <thead>
+                        <tr>
+                            <th>Q</th>
+                            <th>W</th>
+                            <th>E</th>
+                            <th>R</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+        <script type="module" src="js/index.js"></script>
+    </body>
+</html>
