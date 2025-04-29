@@ -23,6 +23,12 @@ input {
     padding: var(--spacing);
 }
 
+main > article {
+    display: grid;
+    gap: var(--spacing);
+    padding: var(--spacing);
+}
+
 table {
     width: 100%;
 }
@@ -32,9 +38,38 @@ th {
     padding: var(--spacing);
 }
 
+#cooldowns,
+#statistics {
+    background-color: #222;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+#cooldowns > header:first-child,
+#statistics > header:first-child {
+    background-color: #333;
+}
+
 #controls {
+    background-color: #222;
     display: flex;
     gap: var(--spacing);
+    padding: var(--spacing);
+}
+
+#controls label {
+    display: none;
+}
+
+#statistics td {
+    text-align: end;
+}
+
+#statistics th {
+    max-width: 4ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .control {

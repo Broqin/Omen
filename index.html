@@ -9,46 +9,53 @@
     </head>
     <body>
         <main>
-            <header>
-                <h1>Omen</h1>
-            </header>
-            <section id="controls">
+            <form id="controls">
                 <div class="control">
                     <label for="champion">Champion</label>
-                    <input id="champion" type="text" placeholder="Champion name">
+                    <input id="champion" type="text" placeholder="Shen">
                 </div>
                 <div class="control">
                     <label for="versions">Recent Patches</label>
                     <input id="versions" type="number" max="5" min="0" placeholder="0">
                 </div>
-                <button id="update">Update</button>
-            </section>
-            <section id="champion">
+                <button id="update" type="submit">Compare</button>
+            </form>
+            <article>
                 <header>
-                    <h2>Champion</h2>
+                    <h1>Champion</h1>
                 </header>
-                <table id="cooldowns">
-                    <caption>Champion's Spell Cooldowns</caption>
-                    <thead>
-                        <tr>
-                            <th>Q</th>
-                            <th>W</th>
-                            <th>E</th>
-                            <th>R</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-                <table id="statistics">
-                    <caption>Champion's Statistics</caption>
-                    <thead>
-                        <tr>
-                            <th>Armor</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </section>
+                <section id="cooldowns">
+                    <header>
+                        <h2>Cooldowns</h2>
+                    </header>
+                    <table>
+                        <caption>Champion's Spell Cooldowns</caption>
+                        <thead>
+                            <tr>
+                                <th>Q</th>
+                                <th>W</th>
+                                <th>E</th>
+                                <th>R</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+                <section id="statistics">
+                    <header>
+                        <h2>Statistics</h2>
+                    </header>
+                    <table id="statistics">
+                        <caption>Champion's Statistics</caption>
+                        <thead>
+                            <tr>
+                                <th>Armor</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+            </article>
         </main>
         <script type="module" src="js/index.js"></script>
     </body>

@@ -26,19 +26,23 @@ const STATISTICS = {
     spellblock: "Spell Block",
     spellblockperlevel: "Spell Block Per Level"
 };
-const STATISTICS_TABLE = document.querySelector('#statistics');
-const COOLDOWNS_TABLE = document.querySelector('#cooldowns');
+const STATISTICS_TABLE = document.querySelector('#statistics table');
+const COOLDOWNS_TABLE = document.querySelector('#cooldowns table');
+const CONTROLS = document.querySelector('#controls');
 const updateButton = document.querySelector('#update');
 const versionsCount = document.querySelector('#versions');
 
+champion.focus();
 const example = await x(3, champion.value);
 isLoading = false;
 updateButton.disabled = false;
 updateCooldownsTable(example);
 updateStatisticsTable(example);
 
-updateButton.addEventListener('click', async event => {
+CONTROLS.addEventListener('submit', async event => {
+    event.preventDefault()
     const count = parseInt(versionsCount.value);
+    console.log(count)
     const data = await x(count, champion.value);
     if(!data) return;
     updateCooldownsTable(data);
@@ -57,17 +61,20 @@ async function getChampion(version, language, champion) {
 }
 
 async function getRecentVersions(count) {
+    console.log(count)
     const response = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
     const versions = await response.json();
     if(count > 0) {
         return versions.slice(0, count);
     }
-    return versions[0];
+    return [versions[0]];
 }
 
 async function x(count = 0, champion = 'Shen', language = LANGUAGE) {
     if(!champion) {
         champion = 'Shen';
+    } else if(!count) {
+        count = 0;
     }
     const y = [];
     const versions = await getRecentVersions(count);
@@ -116,6 +123,7 @@ function updateStatisticsTable(data) {
     const cells = Object.keys(data[0].stats).map(key => {
         const cell = document.createElement('th');
         cell.textContent = STATISTICS[key];
+        cell.title = STATISTICS[key];
         return cell;
     });
     console.log(cells)
